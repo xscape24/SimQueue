@@ -1,0 +1,173 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+ background-color: rgb(138, 138, 192);
+}
+
+#header, #main-content, #footer{
+    border:0.2vw solid black;
+}
+
+#header{
+        border-top:0.4vw solid black;
+}
+#footer{
+    border-bottom:0.4vw solid black;
+
+}
+#header,#main-content,#footer{
+
+    border-left:0.4vw solid black;
+    border-right:0.4vw solid black;
+}
+/*Header*/
+#header{
+    background-color: aqua;
+    height:14vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+#logo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#logo-img{
+ height:12vh;
+    width:6.5vw;
+    margin-left:10vh; 
+    border-radius: 50%; 
+    margin-right: 2vh;
+    border:0.3vw solid black;
+}
+#logo{
+   font-weight:bold;
+   font-size:2vw;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#simulation-list{
+    list-style-type:none;
+    margin-right:10vh;
+
+    display: flex;
+    justify-content: space-between;
+    gap:4vh;
+    flex-direction: row;
+    
+}
+
+.simulation-btn{
+
+}
+
+#start-btn{
+  background-color: rgb(73, 172, 48);
+    border-radius:2vw;
+}
+
+#stop-btn{
+  background-color: rgb(76, 43, 226);
+    border-radius:2vw;
+
+}
+
+#reset-btn{
+  background-color: rgb(226, 43, 43);
+    border-radius:2vw;
+}
+
+#stats-btn{
+    background-color: rgb(226, 141, 43);
+    border-radius:2vw;
+
+}
+.simulation-icons{
+    height:6vh;
+    width: 3vw;
+}
+
+.simulation-list-item{
+    font-size:2vw;
+    font-weight:bold;
+    padding:1vw;
+    height:10vh;
+
+
+}
+/*Main Section*/
+#main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: brown;
+ height:100vh;
+}
+#supermarket-img{
+    height:20vh;
+    width:20vw;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows:repeat(2,2fr);
+
+
+    background-color: gray;
+    height:150vh;
+    width:90vw;
+    margin-bottom:5vh;
+    border:0.4vw solid black;
+
+}
+
+#grid-item{
+    height:20vh;
+    width:20vw;
+    border:0.2vw solid black;
+}
+
+.grid-item-header{
+font-size:2vw;
+font-weight:bold;
+}
+.grid-item-1{
+    background-color: yellow;
+}
+.grid-item-2{
+    background-color: rgb(102, 102, 60);
+}
+
+.grid-item-3{
+    background-color: rgb(0, 255, 8);
+}
+
+.grid-item-4{
+    background-color: rgb(255, 0, 144);
+}
+
+
+
+/*Footer*/
+#footer{
+ height:10vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: greenyellow;
+}
+#footer-text{
+font-size:1vw;
+}
