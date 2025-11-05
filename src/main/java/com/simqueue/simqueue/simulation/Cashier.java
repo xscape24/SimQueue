@@ -1,3 +1,5 @@
+package com.simqueue.simqueue.simulation;
+
 import java.util.Random;
 public class Cashier {
 

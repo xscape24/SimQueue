@@ -1,3 +1,5 @@
+package com.simqueue.simqueue.simulation;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;

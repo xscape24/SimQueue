@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SimQueue&trade</title>
     <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
-
+  
 
         
    <header id="header">
@@ -15,33 +16,70 @@
   <img src="assets\Screenshot 2025-11-04 072911.png" alt="" id="logo-img">
         <h1 id="logo">SimQueue&trade;</h1>
         </div>
+
+        <audio controls autoplay src="">
+<source src="assets\Quantum Jazz - Passing Fields.mp3" type="audio.mp3">
+        </audio>
       
         <ul id="simulation-list">
                  <button class="simulation-btn" id="start-btn">   <li class="simulation-list-item"><img src="assets\play.png" class="simulation-icons" alt="">Start</li></button>
                  <button class="simulation-btn" id="stop-btn"> <li class="simulation-list-item"><img src="assets\video-pause-button.png" class="simulation-icons" alt="">Stop</li></button>
                  <button class="simulation-btn" id="reset-btn">         <li class="simulation-list-item"><img src="assets\reset.png" class="simulation-icons" alt="">Reset</li></button>
                  <button class="simulation-btn" id="stats-btn">      <li class="simulation-list-item"><img src="assets\graph.png" class="simulation-icons" alt="">Stats</li></button>
+<button id="start-btn">Start Simulation</button>
+<script>
+document.getElementById("start-btn").addEventListener("click", () => {
+    fetch("/start-simulation").then(res => console.log(res));
+});
+</script>
 
         </ul>
    </header>
    <main id="main-content">
 
-<audio controls autoplay src="">
-<source src="assets\Quantum Jazz - Passing Fields.mp3" type="audio.mp3">
-        </audio>
-        <img src="assets\unnamed.png" id="supermarket-img" alt="">
+
+      
 
         <div id="grid-container">
 <div class="grid-item grid-item-1">
        <h1 class="grid-item-header">Customer Line</h1>
-   
+     <img src="assets\unnamed.png" id="supermarket-img" alt="">
+     <ul class="customer-list">
+        <li class="customer">Max</li>
+        <li class="customer">Ruby</li>
+        <li class="customer">Tom</li>
+        <li class="customer">Jerry</li>
+     </ul>
       
 </div>
 <div class="grid-item grid-item-2">
            <h1 class="grid-item-header">Cashier Line</h1>
+           <div class="cashier-container">
+                <div class="cashier-box cashier-box-1" >
+                        <img src="" class="customer-img" alt="">
+                        <p class="customer-text"></p>
+                </div>
+                <div class="cashier-box cashier-box-2" >
+
+                </div>
+                <div class="cashier-box cashier-box-3" >
+
+                </div>
+                <div class="cashier-box cashier-box-4" >
+                        
+                </div>
+           </div>
 </div>
 <div class="grid-item grid-item-3">
          <h1 class="grid-item-header">Live Events</h1>
+           <ul id="live-events">
+               <li>virove</li>
+           </ul>
+           <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+
+  <!-- ✅ Your own script after the libraries -->
+  <script src="script.js"></script>
 </div>
 <div class="grid-item grid-item-4">
      <h1 class="grid-item-header">Overall Store Stats</h1>   

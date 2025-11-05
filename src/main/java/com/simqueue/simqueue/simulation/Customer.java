@@ -1,3 +1,4 @@
+package com.simqueue.simqueue.simulation;
 public class Customer {
     // Attributes
     String name;

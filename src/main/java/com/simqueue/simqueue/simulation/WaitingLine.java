@@ -1,4 +1,9 @@
+package com.simqueue.simqueue.simulation;
+
+
 import java.util.*;
+
+
 
 public class WaitingLine {
 

@@ -1,4 +1,15 @@
-import java.util.*;
+
+
+
+package com.simqueue.simqueue.simulation;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
+
 
 public class Main {
     public static void main (String[]args){
@@ -13,7 +24,7 @@ public class Main {
         //Variables
         List <String>dataList=new LinkedList<String>();//collects data from simulation
         int totalServiceTime=0,averageServiceTime;
-        List<Cashier> cashierList=new LinkedList<>();
+        List<Cashier> cashierList=new LinkedList<Cashier>();
 
         String[]randomNamesArr={//list of random names
             "John", "Michael", "James", "Robert", "William", "Daniel", "Joseph",
@@ -81,7 +92,7 @@ System.out.println("Calling all Cashiers");
         
                 dataList.add(("Number of Customers: "+numOfCustomers).toString());
 
-                System.out.println(dataList.getLast());
+              
    for(int i=0;i<numOfCustomers;i++){
 randomIndex=random.nextInt(randomNamesList.size());
             customerName=randomNamesList.get(randomIndex);
