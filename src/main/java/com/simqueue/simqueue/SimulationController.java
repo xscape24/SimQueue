@@ -4,21 +4,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.simqueue.simqueue.simulation.SimulationRunner;
-import com.simqueue.simqueue.simulation.SimulationService;
 
 @RestController
 public class SimulationController {
 
-    private final SimulationService simulationService;
+    private final SimulationRunner simulationRunner;
 
-    public SimulationController(SimulationService simulationService) {
-        this.simulationService = simulationService;
+    public SimulationController(SimulationRunner simulationRunner) {
+        this.simulationRunner = simulationRunner;
     }
 
     @GetMapping("/start-simulation")
-    public String startSimulation() throws InterruptedException, Exception {
-        SimulationRunner runner = new SimulationRunner(simulationService);
-        runner.run(); // run the simulation when frontend requests
+    public String startSimulation() throws Exception {
+        simulationRunner.startSimulation(); // this runs the simulation and triggers eventService internally
         return "Simulation started!";
     }
 }
