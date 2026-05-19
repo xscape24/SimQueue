@@ -1,8 +1,10 @@
 package com.simqueue.simqueue.simulation;
-import com.simqueue.simqueue.EventService;
+
+import java.util.Random;
+
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import com.simqueue.simqueue.EventService;
 
 @Service
 public class SimulationService {
@@ -15,54 +17,37 @@ public class SimulationService {
     }
 
     public void runSimulation() throws InterruptedException {
-        List<String> dataList = new LinkedList<>();
-        int totalServiceTime = 0;
+        // Simple demo now: 5 customers with random "service times"
+        int numCustomers = 5;
 
-        eventService.sendEvent("Welcome to the Supermarket Simulator.");
-        Thread.sleep(1000);
+        eventService.sendEvent("Simulation started with " + numCustomers + " customers.");
 
-        int numOfCashiers = random.nextInt(3) + 3; // 3–5
-        eventService.sendEvent("Number of cashiers: " + numOfCashiers);
+        for (int i = 1; i <= numCustomers; i++) {
+            String name = "Customer " + i;
 
-        List<Cashier> cashierList = new LinkedList<>();
-        for (int i = 0; i < numOfCashiers; i++) {
-            Cashier cashier = new Cashier(new CashierQueue());
-            cashierList.add(cashier);
-            eventService.sendEvent("Cashier " + cashier.cashierId + " is at queue " + cashier.queue.queueID + ".");
+            // Poisson-ish arrival: exponential interarrival times (λ = 0.5 customers/sec)
+            double lambda = 0.5; // arrivals per second
+            double uArr = random.nextDouble();
+            double interArrival = -Math.log(1 - uArr) / lambda; // exponential
+            long interArrivalMs = (long) (interArrival * 1000);
+
+            Thread.sleep(interArrivalMs);
+            eventService.sendEvent(name + " arrived after " + (interArrivalMs / 1000.0) + "s.");
+
+            // Exponential service time (μ = 0.4 customers/sec)
+            double mu = 0.4;
+            double uServ = random.nextDouble();
+            double serviceTime = -Math.log(1 - uServ) / mu;
+            long serviceTimeMs = (long) (serviceTime * 1000);
+
+            eventService.sendEvent("Cashier 1 started serving " + name +
+                    " (service time ≈ " + String.format("%.2f", serviceTime) + "s).");
+
+            Thread.sleep(500); // just pacing visuals a bit
+
+            eventService.sendEvent("Cashier 1 finished serving " + name + ".");
         }
 
-        WaitingLine line = new WaitingLine();
-
-        String[] randomNamesArr = {"John", "Emma", "Olivia", "Liam", "Mason", "Sophia", "Noah", "Ava", "Ethan", "Isabella"};
-        List<String> randomNames = new ArrayList<>(Arrays.asList(randomNamesArr));
-
-        int numOfCustomers = random.nextInt(6) + 5; // 5–10
-        eventService.sendEvent("Number of customers: " + numOfCustomers);
-
-        for (int i = 0; i < numOfCustomers; i++) {
-            int randomIndex = random.nextInt(randomNames.size());
-            String customerName = randomNames.remove(randomIndex);
-            Customer customer = new Customer(customerName);
-            line.line.add(customer);
-            eventService.sendEvent(customer.name + " has entered the line.");
-            Thread.sleep(300);
-        }
-
-        for (Cashier cashier : cashierList) {
-            cashier.serveCustomer(line.line.poll());
-        }
-
-        while (!line.line.isEmpty()) {
-            for (Cashier cashier : cashierList) {
-                if (!cashier.isOccupied) {
-                    int m = cashier.serveCustomer(line.line.poll());
-                    totalServiceTime += m;
-                    if (line.line.isEmpty()) break;
-                }
-            }
-        }
-
-        eventService.sendEvent("The simulation is complete!");
-        eventService.sendEvent("Average service time: " + ((totalServiceTime / numOfCustomers) / 1000) + " seconds");
+        eventService.sendEvent("Simulation finished.");
     }
 }

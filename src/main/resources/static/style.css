@@ -28,7 +28,7 @@ body{
 }
 /*Header*/
 #header{
-    background-color: aqua;
+    background-color: rgb(107, 202, 202);
     height:14vh;
     display: flex;
     flex-direction: row;
@@ -43,11 +43,11 @@ body{
 }
 #logo-img{
  height:12vh;
-    width:6.3vw;
-    margin-left:10vh; 
-    border-radius: 50%; 
+    width:6.1vw;
+    margin-left:3vh; 
+    border-radius: 10%; 
     margin-right: 2vh;
-    border:0.3vw solid black;
+    border:0.2vw solid black;
 }
 #logo{
    font-weight:bold;
@@ -88,6 +88,27 @@ border-radius:1vw;
 
 #stats-btn{
     background-color: rgb(226, 141, 43);
+    
+}
+
+#start-btn:focus{
+  background-color: rgb(135, 187, 123);
+
+}
+
+#stop-btn:focus{
+  background-color: rgb(125, 105, 215);
+    
+
+}
+
+#reset-btn:focus{
+  background-color: rgb(200, 127, 127);
+   
+}
+
+#stats-btn:focus{
+    background-color: rgb(163, 136, 106);
     
 }
 .simulation-icons{
@@ -149,41 +170,59 @@ margin-top:1vh;
 margin-bottom:2vh;
 }
 .grid-item-1{
-    background-color: yellow;
+    background-color: rgb(218, 218, 20);
     display: flex;
     flex-direction: column;
+    
+    align-items: center;
 
 }
 
+.grid-item-1-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 .customer-list{
 display: flex;
 flex-direction:column;
 text-align: center;
 align-items: center;
+border-radius:1vw;
 
 }
 
 .customer-item{
 display: flex;
 flex-direction: row;
-justify-content: center;
+justify-content:space-evenly;
 border:0.2vw solid black;
 width:30vw;
+
 }
 
 .customer-img{
-border:0.1vw solid black;
+border:0.2vw solid black;
 height:10vh;
+width:5vw;
+border-radius:0.2vw;
+
 
 }
 
 .customer-name{
-
+      display: flex;
+    justify-content: center;
+}
+.customer-name-container{
+    display: flex;
+    justify-content: center;
 }
 
-
-
-
+.cashier-img{
+    height:140vh;
+    width:40vw;
+}
 
 
 
@@ -233,6 +272,7 @@ font-size:0.5vw;
 .cashier-img{
 border:0.1vw solid black;
 height:8vh;
+width:3.7vw;
 
 }
 
@@ -269,18 +309,18 @@ font-size:1.3vw;
     background-color: rgb(0, 136, 255);
 }
 .cashier-box-4{
-    background-color: rgb(64, 255, 0);
+    background-color: rgb(68, 214, 20);
 }
 
 .grid-item-3{
-    background-color: rgb(0, 255, 8);
+    background-color: rgb(38, 217, 44);
     display: flex;
     flex-direction: column;
    
 }
 
 #grid-item-3-header{
-  
+  margin-bottom:0.2vh;
 }
 
 
@@ -292,9 +332,9 @@ font-size:1.3vw;
 
     margin:auto;
     margin-top:0vh;
-    height:51vh;
+    height:53vh;
     width:30vw;
-    background-color: aquamarine;
+    background-color: rgb(117, 226, 190);
     border:0.4vw solid black;
     list-style-type: none;
     overflow:scroll;
@@ -303,7 +343,7 @@ font-size:1.3vw;
 
 
 .grid-item-4{
-    background-color: rgb(255, 0, 144);
+    background-color: rgb(230, 20, 139);
    
 }
 
@@ -381,12 +421,12 @@ font-size:2vw;
 }
 /*Footer*/
 #footer{
- height:10vh;
+ height:11vh;
  display: flex;
  justify-content: center;
  align-items: center;
- background-color: greenyellow;
+ background-color: rgb(120, 142, 88);
 }
 #footer-text{
-font-size:1vw;
+font-size:1.3vw;
 }

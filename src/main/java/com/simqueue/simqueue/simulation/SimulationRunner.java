@@ -1,9 +1,10 @@
 package com.simqueue.simqueue.simulation;
 
-import org.springframework.stereotype.Service;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
-@Service
-public class SimulationRunner {
+@Component
+public class SimulationRunner implements CommandLineRunner {
 
     private final SimulationService simulationService;
 
@@ -11,12 +12,14 @@ public class SimulationRunner {
         this.simulationService = simulationService;
     }
 
-    public void startSimulation() {
-        try {
-            simulationService.runSimulation();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    @Override
+    public void run(String... args) throws Exception {
+        simulationService.runSimulation();
     }
+
+    public void startSimulation() throws Exception {
+simulationService.runSimulation();
+    }
+
+
 }
- 
