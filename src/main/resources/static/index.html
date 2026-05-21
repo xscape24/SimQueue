@@ -17,14 +17,14 @@
                         <h1 id="logo">SimQueue - Supermarket Simulator</h1>
                 </div>
                 
-              
+                
                 
                 <ul id="simulation-list">
                         <button class="simulation-btn" id="start-btn">   <li class="simulation-list-item"><img src="assets\play.png" class="simulation-icons" alt="">Start</li></button>
                         <button class="simulation-btn" id="stop-btn"> <li class="simulation-list-item"><img src="assets\video-pause-button.png" class="simulation-icons" alt="">Stop</li></button>
                         <button class="simulation-btn" id="reset-btn">         <li class="simulation-list-item"><img src="assets\reset.png" class="simulation-icons" alt="">Reset</li></button>
                         <button class="simulation-btn" id="stats-btn">      <li class="simulation-list-item"><img src="assets\graph.png" class="simulation-icons" alt="">Stats</li></button>
-                
+                        
                         <script>
                                 document.getElementById("start-btn").addEventListener("click", () => {
                                         fetch("/start-simulation").then(res => console.log(res));
@@ -33,210 +33,214 @@
                         
                 </ul>
         </header>
+        
         <main id="main-content">
-                
-                
+         
+             
                 
                 
                 <div id="grid-container">
                         <div class="grid-item grid-item-1">
                                 <h1 class="grid-item-header">Customer Queue</h1>
-                                <div class="grid-item-1-container">
-                                      
- <ul class="customer-list">
+                                
+                                
+                                
+                                <ul class="customer-list">
                                         <li class="customer-item"> <img src="assets\faceone.jpg" class="customer-img" alt="">
                                                 <div class="customer-name-container">
-                                         <h1 class="customer-name">Customer 1: Mary</h1>        
+                                                        <h1 class="customer-name">Customer 1: Mary</h1>        
                                                 </div>
-                                       
+                                                
                                         </li>
                                         <li class="customer-item"> <img src="assets\facetwo.jpg" class="customer-img" alt="">
-                                           <div class="customer-name-container">
-                                         <h1 class="customer-name">Customer 2: Bryan</h1>        
+                                                <div class="customer-name-container">
+                                                        <h1 class="customer-name">Customer 2: Bryan</h1>        
                                                 </div>
-                                       
+                                                
                                         </li>
                                         <li class="customer-item"> <img src="assets\facethree.png" class="customer-img" alt="">
-                                             <div class="customer-name-container">
-                                         <h1 class="customer-name">Customer 3: Emily</h1>        
+                                                <div class="customer-name-container">
+                                                        <h1 class="customer-name">Customer 3: Emily</h1>        
                                                 </div>
-                                       
+                                                
                                         </li>
                                         <li class="customer-item"> <img src="assets\facefour.jpg" class="customer-img" alt="">
-                                             <div class="customer-name-container">
-                                         <h1 class="customer-name">Customer 4: Lisa</h1>        
+                                                <div class="customer-name-container">
+                                                        <h1 class="customer-name">Customer 4: Lisa</h1>        
                                                 </div>
-                                       
+                                                
                                         </li>
                                         <li class="customer-item"> <img src="assets\facefive.jpg" class="customer-img" alt="">
-                                           <div class="customer-name-container">
-                                         <h1 class="customer-name">Customer 5: Monique</h1>        
+                                                <div class="customer-name-container">
+                                                        <h1 class="customer-name">Customer 5: Jane</h1>        
                                                 </div>
-                                       
-                                        </li>
-                                </ul>
-
-                                <img src="assets\cashier.jpg" alt="" class="cashier-img">
-
-                                </div>
-                              
-                                
-                                  <audio controls loop src="">
-                        <source src="assets\QuantumJazz-PassingFields.mp3" type="">
-                </audio>
-                                
-                                
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <div class="grid-item grid-item-2">
-                                      <h1 class="grid-item-header">Cashier Line</h1>
-                                 <ul class="cashier-list">
-                                        <li class="cashier-item"> 
                                                 
-                                                <ul class="cashier-line">
-                                                        <h1 className="cashier-line-header">Cashier Line</h1>
-                                                        <li class="customer">Bob (in line)</li>
-                                                </ul>
-                                                <img src="assets\facesix.jpg" class="cashier-img" alt="">
-                                     <div class="cashier-profile"> <h1 class="cashier-name">Cashier 1: Janice</h1>
-                                         <div class="busy-meter">  <p class="cashier-text">Busyness: </p>      </div></div>
-                                        </li>
-                                        <li class="cashier-item">   <ul class="cashier-line">
-                                                        <h1 className="cashier-line-header">Cashier Line</h1>
-                                                        <li class="customer">Bob (in line)</li>
-                                                </ul><img src="assets\faceseven.jpg"  class="cashier-img" alt="">
-                                         <div class="cashier-profile"><h1 class="cashier-name">Cashier 2: Janice</h1> <div class="busy-meter">  <p class="cashier-text">Busyness: </p>      </div></div>
-                                        </li>
-                                        <li class="cashier-item">   <ul class="cashier-line">
-                                                        <h1 className="cashier-line-header">Cashier Line</h1>
-                                                        <li class="customer">Bob (in line)</li>
-                                                </ul><img src="assets\faceeight.png"  class="cashier-img" alt="">
-                                       <div class="cashier-profile"><h1 class="cashier-name">Cashier 3: Janice</h1> <div class="busy-meter">  <p class="cashier-text">Busyness: </p>      </div></div> 
-                                        </li>
-                                        <li class="cashier-item">   <ul class="cashier-line">
-                                                        <h1 className="cashier-line-header">Cashier Line</h1>
-                                                        <li class="customer">Bob (in line)</li>
-                                                </ul><img src="assets\facenine.jpg"  class="cashier-img" alt="">
-                                                 <div class="cashier-profile">
-                                        <h1 class="cashier-name">Cashier 4: Janice</h1> <div class="busy-meter"> 
-                                                 <p class="cashier-text">Busyness: </p>      </div></div>
-
-                                        </li>
-                                        <li class="cashier-item">   <ul class="cashier-line">
-                                                        <h1 className="cashier-line-header">Cashier Line</h1>
-                                                        <li class="customer">Bob (in line)</li>
-                                                </ul><img src="faceten.png" class="cashier-img" alt="">
-                                                <div class="cashier-profile">
-                                                        <h1 class="cashier-name">Cashier 1: Janice</h1> <div class="busy-meter">  <p class="cashier-text">Busyness: </p>
-                                                              </div>
-                                                </div>
-                                        
                                         </li>
                                 </ul>
-                              
-                        </div>
-                        <div class="grid-item grid-item-3">
-                                <h1 class="grid-item-header" id="grid-item-3-header">Live Events</h1>
-                                <ul id="live-events">
-                                        
-                                </ul>
-                                <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
-                                <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+                                   <audio controls autoplay class="supermarket-audio">
+                <source src="/audio/QuantumJazz-PassingFields.mp3" type="audio/mpeg" >
+                Your browser does not support the audio element.
+        </audio>
                                 
-                                <!-- ✅ Your own script after the libraries -->
-                                <script src="script.js"></script>
-                        </div>
-                        <div class="grid-item grid-item-4">
-                                <h1 class="grid-item-header" id="grid-item-4-header">Overall Store Stats</h1> 
-                                <div class="stats-container">
-                                        <div class="store-stats store-stats-1">
-                                             <div class="stats-data-container">
-                                                <img src="assets\shopping-cart_3954224.png" alt="" id="shopping-cart-icon" class="stats-icon">
-                                                <p class="stats-data">450</p>
-                                             </div>
-                                                <h1 class="stats-header">Total Customers</h1>
-                                              
-                                        </div>
-                                        <div class="bottom-stats-container">
-                                                <div class=" store-stats" class="store-stats-2">
-                                                         <div class="stats-data-container">
-                                               
-                                                <svg xmlns="http://www.w3.org/2000/svg"  id="profile-icon" class="stats-icon" width="16" height="16" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
-  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-  <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
-</svg>
-                                                <p class="stats-data">400</p>
-                                             </div>
-                                           
-                                                             <h1 class="stats-header">Customers Served</h1>
-                                                </div>
-                                                <div class="store-stats" class="store-stats-3">
-                                                         <div class="stats-data-container">
-                                               
-                                                <svg xmlns="http://www.w3.org/2000/svg" id="clock-icon" class="stats-icon" width="10" height="6" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
-  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
-</svg>
-                                                <p class="stats-data queue-time-data" >2.8 sec</p>
-                                             </div>
-                                               
-                                                         <h1 class="stats-header">Avg. Queue Time <i class="bi bi-0-circle"></i></h1>
-                                                </div>
-                                        </div>
-                                        
-                                </div>
+                                
+                                
+                                
+                                
+                                
+                                
                                 
                         </div>
                         
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="grid-item grid-item-2">
+                                <h1 class="grid-item-header">Cashier Line</h1>
+                                
+                                <ul class="cashier-list">
+                                        <li class="cashier-item"> 
+                                                
+                                                <ul class="cashier-line">
+                                                        <h1 className="cashier-line-header">Customer Line</h1>
+                                                        <li class="customer">Mary</li>
+                                                </ul>
+                                                <img src="assets\facesix.jpg" class="cashier-img" alt="">
+                                                <div class="cashier-profile"> <h1 class="cashier-name">Cashier 1: Jace</h1>
+                                                        <div class="busy-meter">  <p class="cashier-text">Busyness: </p>      </div></div>
+                                                </li>
+                                                <li class="cashier-item">   <ul class="cashier-line">
+                                                        <h1 className="cashier-line-header">Customer Line</h1>
+                                                        <li class="customer">Bryan</li>
+                                                </ul><img src="assets\faceseven.jpg"  class="cashier-img" alt="">
+                                                <div class="cashier-profile"><h1 class="cashier-name">Cashier 2: Peach</h1> <div class="busy-meter">  <p class="cashier-text">Busyness: </p>      </div></div>
+                                        </li>
+                                        <li class="cashier-item">   <ul class="cashier-line">
+                                                <h1 className="cashier-line-header">Customer Line</h1>
+                                                <li class="customer">Emily</li>
+                                        </ul><img src="assets\faceeight.jpg"  class="cashier-img" alt="">
+                                        <div class="cashier-profile"><h1 class="cashier-name">Cashier 3: Tina</h1> <div class="busy-meter">  <p class="cashier-text">Busyness: </p>      </div></div> 
+                                </li>
+                                <li class="cashier-item">   <ul class="cashier-line">
+                                        <h1 className="cashier-line-header">Customer Line</h1>
+                                        <li class="customer">Lisa</li>
+                                </ul><img src="assets\facenine.jpg"  class="cashier-img" alt="">
+                                <div class="cashier-profile">
+                                        <h1 class="cashier-name">Cashier 4: Rafael</h1> <div class="busy-meter"> 
+                                                <p class="cashier-text">Busyness: </p>      </div></div>
+                                                
+                                        </li>
+                                        <li class="cashier-item">   <ul class="cashier-line">
+                                                <h1 className="cashier-line-header">Customer Line</h1>
+                                                <li class="customer">Jane</li>
+                                        </ul><img src="assets\faceten.jpg" class="cashier-img cashier-5-img" alt="">
+                                        <div class="cashier-profile">
+                                                <h1 class="cashier-name">Cashier 5: Marco</h1> <div class="busy-meter">  <p class="cashier-text">Busyness: </p>
+                                                </div>
+                                        </div>
+                                        
+                                </li>
+                        </ul>
+                        
+                </div>
+                <div class="grid-item grid-item-3">
+                        <h1 class="grid-item-header" id="grid-item-3-header">Live Events</h1>
+                        <ul id="live-events">
+                                
+                        </ul>
+                        <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+                        
+                        <!-- ✅ Your own script after the libraries -->
+                        <script src="script.js"></script>
+                </div>
+                <div class="grid-item grid-item-4">
+                        <h1 class="grid-item-header" id="grid-item-4-header">Overall Store Stats</h1> 
+                        <div class="stats-container">
+                                <div class="store-stats store-stats-1">
+                                        <div class="stats-data-container">
+                                                <img src="assets\shopping-cart_3954224.png" alt="" id="shopping-cart-icon" class="stats-icon">
+                                                <p class="stats-data">450</p>
+                                        </div>
+                                        <h1 class="stats-header">Total Customers</h1>
+                                        
+                                </div>
+                                <div class="bottom-stats-container">
+                                        <div class=" store-stats" class="store-stats-2">
+                                                <div class="stats-data-container">
+                                                        
+                                                        <svg xmlns="http://www.w3.org/2000/svg"  id="profile-icon" class="stats-icon" width="16" height="16" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
+                                                                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                                                                <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+                                                        </svg>
+                                                        <p class="stats-data">400</p>
+                                                </div>
+                                                
+                                                <h1 class="stats-header">Customers Served</h1>
+                                        </div>
+                                        <div class="store-stats" class="store-stats-3">
+                                                <div class="stats-data-container">
+                                                        
+                                                        <svg xmlns="http://www.w3.org/2000/svg" id="clock-icon" class="stats-icon" width="10" height="6" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                                        </svg>
+                                                        <p class="stats-data queue-time-data" >2.8 sec</p>
+                                                </div>
+                                                
+                                                <h1 class="stats-header">Avg. Queue Time <i class="bi bi-0-circle"></i></h1>
+                                        </div>
+                                </div>
+                                
+                        </div>
                         
                 </div>
                 
                 
-                
-        </main>
-        <footer id="footer">
-                <p id="footer-text">© 2025 Simqueue.  All Rights Reserved.</p>
-        </footer>
+        </div>
+        
+        
+        
+</main>
+<footer id="footer">
+        <p id="footer-text">© 2025 Simqueue.  All Rights Reserved.</p>
+</footer>
 </body>
 
 </html>

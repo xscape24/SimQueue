@@ -214,10 +214,20 @@ border-radius:0.2vw;
       display: flex;
     justify-content: center;
 }
+
+
+
 .customer-name-container{
     display: flex;
     justify-content: center;
 }
+
+.supermarket-audio{
+    margin-top:5vh;
+}
+
+
+
 
 .cashier-img{
     height:140vh;
@@ -227,9 +237,8 @@ border-radius:0.2vw;
 
 
 
-
 .grid-item-2{
-    background-color: rgb(102, 102, 60);
+    background-color: rgb(95, 95, 59);
 }
 
 
@@ -262,6 +271,7 @@ font-size:0.4vw;
 }
 
 .cashier-line-header{
+    text-decoration-line:underline;
 
 font-size:0.5vw;
 }
@@ -332,7 +342,7 @@ font-size:1.3vw;
 
     margin:auto;
     margin-top:0vh;
-    height:53vh;
+    height:50vh;
     width:30vw;
     background-color: rgb(117, 226, 190);
     border:0.4vw solid black;
